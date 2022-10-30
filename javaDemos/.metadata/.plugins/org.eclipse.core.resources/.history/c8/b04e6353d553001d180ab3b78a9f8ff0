@@ -1,0 +1,25 @@
+package workingWithFiles;
+
+import java.io.File;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		File file = new File("C:\\javaDemos\\files\\students.txt");
+		try {
+			if (file.createNewFile()) {
+				System.out.println("Dosya oluþturuldu");
+
+			} else {
+				System.out.println("Dosya zaten mevcut");
+
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}
